@@ -1,8 +1,30 @@
-import React from 'react'
+import React from 'react';
+import Nav from './Nav';
+import BackButton from './BackButton';
+import { Link } from 'react-router-dom';
 
-function ListMoods() {
+function ListMoods({handleSubmit, category, moodsObj, setMoody}) {
   return (
-    <div>ListMoods</div>
+    <div className="page--wrapper">
+      <Nav />
+      <div className="page--div">
+          <Link to="/categories"><BackButton/></Link>
+        <div className="intro--container categories--container">
+          <span id="mood-span">STEP 2 - {category}</span>
+          <h1>I'm Feeling...</h1>
+          <form className="categories--form" onSubmit={handleSubmit}>
+            {
+              category ? moodsObj[category].map(mood => (
+                <div>
+                <Link to="/books"><button className="b-main b-cat" type="submit" onClick={() => setMoody(mood)}>{mood}</button></Link>
+                </div>
+              )) : <div></div>
+            }
+
+            </form>
+        </div>
+      </div>
+    </div>
   )
 }
 

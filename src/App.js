@@ -25,6 +25,7 @@ import "./Styles/Nav.css"
 function App() {
 
   const [category, setCategory] = useState("");
+  const [moody, setMoody] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -46,7 +47,8 @@ function App() {
           <Route path = '/' exact element={<Intro/>} />
           <Route path = '/about' exact element={<About/>} />
           <Route path = '/categories' exact element={<ListCategories handleSubmit={handleSubmit} setCategory={setCategory}/>} />
-          <Route path = '/moods' exact element={<ListMoods/>} />
+          <Route path = '/moods' exact element={ category ? <ListMoods handleSubmit={handleSubmit} category={category} moodsObj={moodsObj} moody={moody} setMoody={setMoody}/> : <Intro/>} />
+          <Route path = '/books' exact element={ category ? <ListBooks moody={moody}/> : <Intro/>} />
         </Routes>
       </Router>
     </div>

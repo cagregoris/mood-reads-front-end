@@ -2,7 +2,9 @@ import React from 'react'
 
 function BackButton() {
   return (
-    <div>BackButton</div>
+    <div className="btn--container">
+    <button className="b-back">Go Back</button>
+  </div>
   )
 }
 

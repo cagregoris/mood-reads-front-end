@@ -1,0 +1,68 @@
+.book-div h1{
+  font-size: 60px;
+}
+
+.book-div {
+  height: auto;
+  padding-top: 50px;
+}
+
+.inner--div {
+  width: 50%;
+  text-align: center;
+  padding-bottom: 100px;
+}
+
+.inner--div p {
+  line-height: 1.6;
+  font-weight: 500;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-transform: none;
+}
+
+.book-span {
+  font-weight: 800;
+  font-size: 20px;
+}
+
+.img-div {
+  max-width: 50%;
+  margin: auto;
+  padding-bottom: 50px;
+}
+
+.img-div img {
+  width: 100%;
+  height: auto; 
+  display: block;
+  border: 5px solid #ff5851;
+  background-color: #ff5851;
+  box-shadow: #1c1c20 10px 10px;
+}
+
+@media only screen and (min-width: 280px) and (max-width: 912px) {
+  .inner--div {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 100px;
+  }
+
+  .inner--div h1 {
+    font-size: 40px;
+  }
+
+  .inner--div h4 {
+    font-size: 15px;
+    margin-bottom: 0;
+  }
+
+  .book-span {
+    font-size: 15px;
+  }
+
+  .inner--div p {
+    width: 90%;
+    margin: auto;
+  }
+}
