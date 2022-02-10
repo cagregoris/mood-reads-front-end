@@ -12,7 +12,6 @@ import Intro from "./Components/Intro";
 import ListBooks from "./Components/ListBooks";
 import ListCategories from "./Components/ListCategories";
 import ListMoods from "./Components/ListMoods";
-import Nav from "./Components/Nav";
 
 //STYLES
 import "./Styles/About.css"
@@ -24,13 +23,29 @@ import "./Styles/ListMoods.css"
 import "./Styles/Nav.css"
 
 function App() {
+
+  const [category, setCategory] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    console.log(category)
+  }
+
+  const moodsObj = {
+    "Unpleasant-Energized" : ["fearful", "angry"],
+    "Unpleasant-Calm" : ["sad", "ominous"],
+    "Pleasant-Energized" : ["cheerful", "humorous", "idylic", "adventurous"],
+    "Pleasant-Calm" : ["hopeful", "whimsical", "reflective", "romantic"]
+  } 
+
   return (
     <div className="App">
       <Router >
         <Routes>
           <Route path = '/' exact element={<Intro/>} />
           <Route path = '/about' exact element={<About/>} />
-          <Route path = '/categories' exact element={<ListCategories/>} />
+          <Route path = '/categories' exact element={<ListCategories handleSubmit={handleSubmit} setCategory={setCategory}/>} />
           <Route path = '/moods' exact element={<ListMoods/>} />
         </Routes>
       </Router>
