@@ -31,6 +31,7 @@ function App() {
           <Route path = '/' exact element={<Intro/>} />
           <Route path = '/about' exact element={<About/>} />
           <Route path = '/categories' exact element={<ListCategories/>} />
+          <Route path = '/moods' exact element={<ListMoods/>} />
         </Routes>
       </Router>
     </div>
