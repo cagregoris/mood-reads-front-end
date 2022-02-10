@@ -8,8 +8,8 @@ function Nav() {
         <span>Book recommendation generator</span>
       </div>
       <div className="right-side--nav">
-        <Link to="/"><button>HOME</button></Link>
-        <Link to="/about"><button>ABOUT</button></Link>
+        <Link style={{ color: '#1c1c20' }} to="/"><button>HOME</button></Link>
+        <Link style={{ color: '#1c1c20' }} to="/about"><button>ABOUT</button></Link>
       </div>
     </div>
   )

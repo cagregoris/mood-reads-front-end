@@ -58,4 +58,14 @@
   .right-side--nav button {
     font-size: 13px;
   }
+
+  .right-side--nav button:hover {
+    color: #1c1c20;
+    text-shadow: none;
+    font-size: 13px;
+  }
+
+  .right-side--nav button:visited {
+    color: #1c1c20;
+  }
 }
