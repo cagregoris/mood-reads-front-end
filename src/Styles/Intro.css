@@ -1,0 +1,84 @@
+.intro--container{
+  height: 90vh;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-family: 'Shrikhand', cursive;
+  font-size: 78px;
+  letter-spacing: 2px;
+  margin: 10px;
+  color: #1c1c20;
+}
+
+#intro-span {
+  margin-bottom: 50px;
+  color: #ff5851;
+  font-weight: 800;
+}
+
+.b-main {
+  font-size: 1.5rem;
+  color: #ff5851;
+  width: 180px;
+  padding: 15px 0;
+  border: 4px solid #1c1c20;
+  position: relative;
+  transition: all .1s ease;
+  text-transform: uppercase;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+button {
+  overflow: visible;
+  line-height: 1.25;
+}
+
+.b-main:hover::after, 
+.b-main:hover::before {
+  content: "";
+  display: block;
+  transform: scale(1);
+  height: 3px;
+  background-color: #ff5851;
+  position: absolute;
+  transition: all .1s ease-in;
+}
+
+.b-main:hover::before {
+  width: 95%;
+  bottom: -8px;
+  left: 2%;
+}
+
+.b-main:hover::after {
+  width: 90%;
+  bottom: -14px;
+  left: 4%;
+}
+
+.b-main:hover {
+  bottom: 8px;
+  transition: all .1s ease-in-out;
+}
+
+@media only screen and (min-width: 280px) and (max-width: 915px) {
+  h1 {
+    line-height: 1.1;
+    text-align: center;
+  }
+
+  #intro-span {
+    font-size: 15px;
+  }
+
+}
