@@ -24,4 +24,12 @@
     padding: 7px 0;
     border: 3px solid #1c1c20;
   }
+
+  .b-back:hover {
+    transition: none;
+    bottom: none;
+    border: 3px solid #1c1c20;
+    color: #1c1c1c;
+    box-shadow: none;
+  }
 }

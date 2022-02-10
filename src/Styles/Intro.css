@@ -81,4 +81,32 @@ button {
     font-size: 15px;
   }
 
+  .b-main:hover::after, 
+.b-main:hover::before {
+  content: none;
+  display: none;
+  transform: none;
+  height: none;
+  background-color: none;
+  position: none;
+  transition: none;
+}
+
+.b-main:hover::before {
+  width: none;
+  bottom: none;
+  left: none;
+}
+
+.b-main:hover::after {
+  width: none;
+  bottom: none;
+  left: none;
+}
+
+.b-main:hover {
+  bottom: 0;
+  transition: none;
+}
+
 }
