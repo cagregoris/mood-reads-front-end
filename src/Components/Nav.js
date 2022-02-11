@@ -11,6 +11,10 @@ function Nav() {
         <Link style={{ color: '#1c1c20' }} to="/"><button>HOME</button></Link>
         <Link style={{ color: '#1c1c20' }} to="/about"><button>ABOUT</button></Link>
       </div>
+      <div className="right-side--nav-mobile">
+        <Link className="nav-btn-mobile" to="/"><span>HOME</span></Link>
+        <Link className="nav-btn-mobile" to="/about"><span>ABOUT</span></Link>
+      </div>
     </div>
   )
 }
